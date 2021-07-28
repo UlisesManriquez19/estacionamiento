@@ -23,43 +23,29 @@ export class ModalPage implements OnInit {
   async presentAlert() {
     const alert = await this.alertController.create({
       cssClass: 'my-custom-class',
-      header: 'Docente en clase',
-      subHeader: 'No interumpir',
-      message: 'Clase en proceso.',
+      header: 'OCUPADO',
+      subHeader: 'estaciomimento ocupado',
+      message: 'no disponible',
       buttons: ['OK']
     });
 
     await alert.present();
 
-    const { role } = await alert.onDidDismiss();
+    const {role} = await alert.onDidDismiss();
     console.log('onDidDismiss resolved with role', role);
   }
-  async presentAlert1() {
-    const alert = await this.alertController.create({
-      cssClass: 'my-custom-class',
-      header: 'Docente en clase',
-      subHeader: 'No interumpir',
-      message: 'Clase en proceso, !!Apunto de acabar!!.',
-      buttons: ['OK']
-    });
 
-    await alert.present();
-
-    const { role } = await alert.onDidDismiss();
-    console.log('onDidDismiss resolved with role', role);
-  }
   async presentAlert2() {
     const alert = await this.alertController.create({
       cssClass: 'my-custom-class',
-      header: 'Laboratorio libre',
-      subHeader: 'vacio',
-      message: 'esperando al docente.',
+      header: 'DESOCUPADO',
+      subHeader: 'estacionamiento desocupado',
+      message: 'disponible.',
       buttons: ['OK']
     });
-
     await alert.present();
 
-    const { role } = await alert.onDidDismiss();
+    const {role} = await alert.onDidDismiss();
     console.log('onDidDismiss resolved with role', role);
   }
 }

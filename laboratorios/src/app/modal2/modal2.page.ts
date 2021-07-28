@@ -87,12 +87,12 @@ export class Modal2Page implements OnInit {
     });
   }
 
-  async presentAlert7() {
+  async presentAlert() {
     const alert = await this.alertController.create({
       cssClass: 'my-custom-class',
-      header: 'Docente en clase',
-      subHeader: 'No interumpir',
-      message: 'Clase en proceso, !!comenzando!!.',
+      header: 'OCUPADO',
+      subHeader: 'estaciomimento ocupado',
+      message: 'no disponible',
       buttons: ['OK']
     });
 
@@ -102,13 +102,17 @@ export class Modal2Page implements OnInit {
     console.log('onDidDismiss resolved with role', role);
   }
 
-  async presentAlert8() {
+  async presentAlert2() {
     const alert = await this.alertController.create({
       cssClass: 'my-custom-class',
-      header: 'Docente en clase',
-      subHeader: 'No interumpir',
-      message: 'Clase en proceso, !!Apunto de acabar!!.',
+      header: 'DESOCUPADO',
+      subHeader: 'estacionamiento desocupado',
+      message: 'disponible.',
       buttons: ['OK']
     });
+    await alert.present();
+
+    const {role} = await alert.onDidDismiss();
+    console.log('onDidDismiss resolved with role', role);
   }
 }
