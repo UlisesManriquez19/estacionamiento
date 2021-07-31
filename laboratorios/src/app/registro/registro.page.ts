@@ -27,7 +27,7 @@ export class RegistroPage implements OnInit {
       this.mensaje = Registro.Valor;
       console.log(this.mensaje);
       if (Registro.estatus) {
-        //document.location.href = '/home';
+        document.location.href = '/inicio';
       } else {
 
       }

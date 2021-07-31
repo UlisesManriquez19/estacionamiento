@@ -18,12 +18,17 @@ export class Modal2Page implements OnInit {
   mensajes3: any;
   mensajes4: any;
   mensajes5: any;
+  mensajes6: any;
 
-  id_profesor: any = 1;
+  id_profesor:  any = 1;
   id_profesor1: any = 2;
   id_profesor2: any = 3;
   id_profesor3: any = 4;
   id_profesor4: any = 5;
+  id_profesor5: any = 6;
+  id_profesor6: any = 7;
+
+
 
 
   ngOnInit() {
@@ -32,6 +37,8 @@ export class Modal2Page implements OnInit {
     this.Buscar2();
     this.Buscar3();
     this.Buscar4();
+    this.Buscar5();
+    this.Buscar6();
   }
 
   Buscar(): void {
@@ -78,10 +85,24 @@ export class Modal2Page implements OnInit {
     });
 
   }
+  Buscar5(): void {
+    this.DataService.postBuscar(this.id_profesor5).subscribe((Buscar: any) => {
+      console.log(Buscar);
+      this.mensajes5 = Buscar;
+      console.log(this.mensajes5);
+    });
+
+  }
+  Buscar6(): void {
+    this.DataService.postBuscar(this.id_profesor6).subscribe((Buscar: any) => {
+      console.log(Buscar);
+      this.mensajes6 = Buscar;
+      console.log(this.mensajes6);
+    });
+
+  }
 
   dismiss() {
-    // using the injected ModalController this page
-    // can "dismiss" itself and optionally pass back data
     this.modalController.dismiss({
       'dismissed': true
     });
