@@ -3,47 +3,59 @@
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title>Register</ion-title>
+    <ion-title>Registro</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <form  #Form="ngForm"(submit)="registro()">
+ 
+  <ion-card-content style="background-color: #2F2F2E; margin-left: 70px; margin-right: 70px; margin-top: 10px;">
+    <label style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 20px;">Servicios disponibles en nuestros estacionamientos.</label><br>
+      <label style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 20px;">
+        Todos nuestros servicios adicionales no tienen cargo extra y los puedes solicitar a nuestro personal.</label><br>
+  <form  #Form="ngForm"(submit)="registro()" style="margin-top: 15px;">
     <ion-item lines="full">
       <ion-label position="floating">Correo</ion-label>
       <ion-input [(ngModel)]="Correo" name="Correo" type="text" required></ion-input>
     </ion-item>
 
+    <br>
     <ion-item lines="full">
       <ion-label position="floating">Nombre</ion-label>
       <ion-input [(ngModel)]="Nombre" name="Nombre" type="text" required></ion-input>
     </ion-item>
 
+    <br>
     <ion-item lines="full">
       <ion-label position="floating">Contraseña</ion-label>
       <ion-input [(ngModel)]="Contrasena" name="Contrasena" type="password" required></ion-input>
     </ion-item>
 
+    <br>
     <ion-item lines="full">
       <ion-label position="floating">Matricula</ion-label>
       <ion-input [(ngModel)]="Matricula" name="Matricula" type="text" required></ion-input>
     </ion-item>
 
+    <br>
     <ion-item lines="full">
       <ion-label position="floating">Modelo</ion-label>
       <ion-input [(ngModel)]="Modelo" name="Modelo" type="text" required></ion-input>
     </ion-item>
 
+    <br>
     <ion-item lines="full">
       <ion-label position="floating">Placas</ion-label>
       <ion-input [(ngModel)]="Placas" name="Placas" type="text" required></ion-input>
     </ion-item>
 
+    <br>
     <ion-item lines="full">
       <ion-label position="floating">Año</ion-label>
       <ion-input [(ngModel)]="Anio" name="Anio" type="text" required></ion-input>
     </ion-item>
 
+    <br>
     <ion-item lines="full">
       <ion-label position="floating">Color</ion-label>
       <ion-input [(ngModel)]="Color" name="Color" type="text" required></ion-input>
@@ -51,8 +63,9 @@
 
     <ion-row>
       <ion-col>
-        <ion-button type="submit" color="danger" expand="block">Registrar</ion-button>
+        <ion-button type="submit" color="success" expand="block">Registrar</ion-button>
       </ion-col>
     </ion-row>
   </form>
+</ion-card-content>
 </ion-content>

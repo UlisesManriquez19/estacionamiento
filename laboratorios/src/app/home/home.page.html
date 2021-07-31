@@ -1,19 +1,27 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Ionic 5 Form
+      Estacionamiento
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="auth-form">
+  <ion-card-content style="background-color: #2F2F2E; margin-left: 10px; margin-right: 10px; margin-top: 10px;">
   <ion-grid>
     <ion-row>
       <ion-col align-self-center>
+        <label style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 20px;" >Somos los estacionamientos de mayor seguridad, tecnología y autoservicio.</label><br>
+          <label style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 20px;">Contamos con:</label><br>
+        <div align="center">
+          <img src="assets\img\seguridad.png" style="width: 900px;">
+          <img src="assets\img\instalaciones.png" style="width: 900px;">
+       </div>
         <ion-button [routerLink]="['/registro']" expand="block" color="primary">Registro</ion-button>
         <br>
-        <ion-button [routerLink]="['/login']" expand="block" color="danger">ingresar</ion-button>
+        <ion-button [routerLink]="['/login']" expand="block" color="tertiary">ingresar</ion-button>
       </ion-col>
     </ion-row>
   </ion-grid>
+</ion-card-content>
 </ion-content>
