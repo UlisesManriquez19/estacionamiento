@@ -99,32 +99,35 @@ export class ModalPage implements OnInit {
       'dismissed': true
     });
   }
-  async presentAlert() {
-    const alert = await this.alertController.create({
-      cssClass: 'my-custom-class',
-      header: 'OCUPADO',
-      subHeader: 'estaciomimento ocupado',
-      message: 'no disponible',
-      buttons: ['OK']
-    });
+  async alertas() {
+    if (this.id_profesor <=21) {
+      const alert = await this.alertController.create({
+        cssClass: 'my-custom-class',
+        header: 'OCUPADO',
+        subHeader: 'estacionamiento ocupado',
+        message: 'no disponible',
+        buttons: ['OK']
+      });
 
-    await alert.present();
+      await alert.present();
 
-    const {role} = await alert.onDidDismiss();
-    console.log('onDidDismiss resolved with role', role);
-  }
+      const {role} = await alert.onDidDismiss();
+      console.log('onDidDismiss resolved with role', role);
 
-  async presentAlert2() {
-    const alert = await this.alertController.create({
-      cssClass: 'my-custom-class',
-      header: 'DESOCUPADO',
-      subHeader: 'estacionamiento desocupado',
-      message: 'disponible.',
-      buttons: ['OK']
-    });
-    await alert.present();
 
-    const {role} = await alert.onDidDismiss();
-    console.log('onDidDismiss resolved with role', role);
+    }else if(this.id_profesor <=28){
+
+      const alert = await this.alertController.create({
+        cssClass: 'my-custom-class',
+        header: 'DESOCUPADO',
+        subHeader: 'estacionamiento desocupado',
+        message: 'disponible.',
+        buttons: ['OK']
+      });
+      await alert.present();
+
+      const {role} = await alert.onDidDismiss();
+      console.log('onDidDismiss resolved with role', role);
+    }
   }
 }

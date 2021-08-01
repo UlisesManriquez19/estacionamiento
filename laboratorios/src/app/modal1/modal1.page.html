@@ -8,7 +8,7 @@
     <ion-item>
       <ion-icon name="car-outline"></ion-icon>
       <ion-label>Espacio 1: {{mensajes.usuario.Modelo}}</ion-label>
-      <ion-button fill="outline" color="Primary" (click)="presentAlert()"> Alerta </ion-button>
+      <ion-button fill="outline" color="Primary" (click)="alertas()"> Alerta </ion-button>
       <ion-button fill="outline" color="success" href="/registro"> ingresar </ion-button>
     </ion-item>
 
@@ -29,7 +29,7 @@
     <ion-item>
       <ion-icon name="car-outline"></ion-icon>
       <ion-label>Espacio 2: {{mensajes1.usuario.Modelo}}</ion-label>
-      <ion-button fill="outline" color="Primary" (click)="presentAlert()"> Alerta </ion-button>
+      <ion-button fill="outline" color="Primary" (click)="alertas()"> Alerta </ion-button>
       <ion-button fill="outline" color="success" href="/registro"> ingresar </ion-button>
     </ion-item>
 
@@ -50,7 +50,7 @@
     <ion-item>
       <ion-icon name="car-outline"></ion-icon>
       <ion-label>Espacio 3: {{mensajes2.usuario.Modelo}}</ion-label>
-      <ion-button fill="outline" color="Primary" (click)="presentAlert9()"> Alerta </ion-button>
+      <ion-button fill="outline" color="Primary" (click)="alertas()"> Alerta </ion-button>
       <ion-button fill="outline" color="success" href="/registro"> ingresar </ion-button>
     </ion-item>
 
@@ -71,7 +71,7 @@
     <ion-item>
       <ion-icon name="car-outline"></ion-icon>
       <ion-label>Espacio 4: {{mensajes.usuario.Modelo}}</ion-label>
-      <ion-button fill="outline" color="Primary" (click)="presentAlert9()"> Alerta </ion-button>
+      <ion-button fill="outline" color="Primary" (click)="alertas()"> Alerta </ion-button>
       <ion-button fill="outline" color="success" href="/registro"> ingresar </ion-button>
     </ion-item>
 
@@ -92,7 +92,7 @@
     <ion-item>
       <ion-icon name="car-outline"></ion-icon>
       <ion-label>Espacio 5: {{mensajes4.usuario.Modelo}}</ion-label>
-      <ion-button fill="outline" color="Primary" (click)="presentAlert9()"> Alerta </ion-button>
+      <ion-button fill="outline" color="Primary" (click)="alertas()"> Alerta </ion-button>
       <ion-button fill="outline" color="success" href="/registro"> ingresar </ion-button>
     </ion-item>
 
@@ -112,42 +112,21 @@
   <ion-card>
     <ion-item>
       <ion-icon name="car-outline"></ion-icon>
-      <ion-label>Espacio 6: {{mensajess.usuario.Modelo}}</ion-label>
-      <ion-button fill="outline" color="Primary" (click)="presentAlert9()"> Alerta </ion-button>
+      <ion-label>Espacio 6: {{mensajes5.usuario.Modelo}}</ion-label>
+      <ion-button fill="outline" color="Primary" (click)="alertas()"> Alerta </ion-button>
       <ion-button fill="outline" color="success" href="/registro"> ingresar </ion-button>
     </ion-item>
 
     <ion-card-content>
-      <ion-label>Nombre de la Persona: {{mensajess.usuario.Nombre}}</ion-label>
+      <ion-label>Nombre de la Persona: {{mensajes5.usuario.Nombre}}</ion-label>
       <br>
-      <ion-label>Matticula: {{mensajess.usuario.Matricula}}</ion-label>
+      <ion-label>Matticula: {{mensajes5.usuario.Matricula}}</ion-label>
       <br>
-      <ion-label>Modelo: {{mensajess.usuario.Modelo}}</ion-label>
+      <ion-label>Modelo: {{mensajes5.usuario.Modelo}}</ion-label>
       <br>
-      <ion-label>Placa: {{mensajess.usuario.Placas}}</ion-label>
+      <ion-label>Placa: {{mensajes5.usuario.Placas}}</ion-label>
       <br>
-      <ion-label>Color: {{mensajess.usuario.Color}}</ion-label>
-    </ion-card-content>
-  </ion-card>
-  <br>
-  <ion-card>
-    <ion-item>
-      <ion-icon name="car-outline"></ion-icon>
-      <ion-label>Espacio 7: {{mensajess.usuario.Modelo}}</ion-label>
-      <ion-button fill="outline" color="Primary" (click)="presentAlert9()"> Alerta </ion-button>
-      <ion-button fill="outline" color="success" href="/registro"> ingresar </ion-button>
-    </ion-item>
-
-    <ion-card-content>
-      <ion-label>Nombre de la Persona: {{mensajess.usuario.Nombre}}</ion-label>
-      <br>
-      <ion-label>Matticula: {{mensajess.usuario.Matricula}}</ion-label>
-      <br>
-      <ion-label>Modelo: {{mensajess.usuario.Modelo}}</ion-label>
-      <br>
-      <ion-label>Placa: {{mensajess.usuario.Placas}}</ion-label>
-      <br>
-      <ion-label>Color: {{mensajess.usuario.Color}}</ion-label>
+      <ion-label>Color: {{mensajes5.usuario.Color}}</ion-label>
     </ion-card-content>
   </ion-card>
 </ion-content>

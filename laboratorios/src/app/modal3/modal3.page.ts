@@ -10,22 +10,24 @@ import {DataService} from '../data/data.service';
 })
 export class Modal3Page implements OnInit {
 
-  constructor(public modalController: ModalController, public alertController: AlertController,private DataService: DataService) { }
-  mensajes: any;
-  mensajes1:any;
-  mensajes2:any;
-  mensajes3:any;
-  mensajes4:any;
-  mensajes5:any;
-  mensajes6:any;
+  constructor(public modalController: ModalController, public alertController: AlertController, private DataService: DataService) {
+  }
 
-  id_profesor:any=8;
-  id_profesor1:any=9;
-  id_profesor2:any=10;
-  id_profesor3:any=11;
-  id_profesor4:any=12;
-  id_profesor5:any=13;
-  id_profesor6:any=14;
+  mensajes: any;
+  mensajes1: any;
+  mensajes2: any;
+  mensajes3: any;
+  mensajes4: any;
+  mensajes5: any;
+  mensajes6: any;
+
+  id_profesor: any = 8;
+  id_profesor1: any = 9;
+  id_profesor2: any = 10;
+  id_profesor3: any = 11;
+  id_profesor4: any = 12;
+  id_profesor5: any = 13;
+  id_profesor6: any = 14;
 
 
   ngOnInit() {
@@ -36,7 +38,9 @@ export class Modal3Page implements OnInit {
     this.Buscar4();
     this.Buscar5();
     this.Buscar6();
+
   }
+
   Buscar(): void {
     this.DataService.postBuscar(this.id_profesor).subscribe((Buscar: any) => {
       console.log(Buscar);
@@ -45,6 +49,7 @@ export class Modal3Page implements OnInit {
     });
 
   }
+
   Buscar1(): void {
     this.DataService.postBuscar(this.id_profesor1).subscribe((Buscar: any) => {
       console.log(Buscar);
@@ -53,6 +58,7 @@ export class Modal3Page implements OnInit {
     });
 
   }
+
   Buscar2(): void {
     this.DataService.postBuscar(this.id_profesor2).subscribe((Buscar: any) => {
       console.log(Buscar);
@@ -61,6 +67,7 @@ export class Modal3Page implements OnInit {
     });
 
   }
+
   Buscar3(): void {
     this.DataService.postBuscar(this.id_profesor3).subscribe((Buscar: any) => {
       console.log(Buscar);
@@ -69,6 +76,7 @@ export class Modal3Page implements OnInit {
     });
 
   }
+
   Buscar4(): void {
     this.DataService.postBuscar(this.id_profesor4).subscribe((Buscar: any) => {
       console.log(Buscar);
@@ -77,6 +85,7 @@ export class Modal3Page implements OnInit {
     });
 
   }
+
   Buscar5(): void {
     this.DataService.postBuscar(this.id_profesor5).subscribe((Buscar: any) => {
       console.log(Buscar);
@@ -85,6 +94,7 @@ export class Modal3Page implements OnInit {
     });
 
   }
+
   Buscar6(): void {
     this.DataService.postBuscar(this.id_profesor6).subscribe((Buscar: any) => {
       console.log(Buscar);
@@ -99,31 +109,68 @@ export class Modal3Page implements OnInit {
       'dismissed': true
     });
   }
-  async presentAlert() {
-    const alert = await this.alertController.create({
-      cssClass: 'my-custom-class',
-      header: 'OCUPADO',
-      subHeader: 'estaciomimento ocupado',
-      message: 'no disponible',
-      buttons: ['OK']
-    });
 
-    await alert.present();
+  async alertas() {
+    if (this.id_profesor <=8) {
+      const alert = await this.alertController.create({
+        cssClass: 'my-custom-class',
+        header: 'OCUPADO',
+        subHeader: 'estacionamiento ocupado',
+        message: 'no disponible',
+        buttons: ['OK']
+      });
 
-    const {role} = await alert.onDidDismiss();
-    console.log('onDidDismiss resolved with role', role);
+      await alert.present();
+
+      const {role} = await alert.onDidDismiss();
+      console.log('onDidDismiss resolved with role', role);
+
+
+    }else if(this.id_profesor >=10){
+
+      const alert = await this.alertController.create({
+        cssClass: 'my-custom-class',
+        header: 'DESOCUPADO',
+        subHeader: 'estacionamiento desocupado',
+        message: 'disponible.',
+        buttons: ['OK']
+      });
+      await alert.present();
+
+      const {role} = await alert.onDidDismiss();
+      console.log('onDidDismiss resolved with role', role);
+    }
   }
-  async presentAlert2() {
-    const alert = await this.alertController.create({
-      cssClass: 'my-custom-class',
-      header: 'DESOCUPADO',
-      subHeader: 'estacionamiento desocupado',
-      message: 'disponible.',
-      buttons: ['OK']
-    });
-    await alert.present();
 
-    const {role} = await alert.onDidDismiss();
-    console.log('onDidDismiss resolved with role', role);
+  async alertas1() {
+    if (this.id_profesor <=11) {
+      const alert = await this.alertController.create({
+        cssClass: 'my-custom-class',
+        header: 'OCUPADO',
+        subHeader: 'estacionamiento ocupado',
+        message: 'no disponible',
+        buttons: ['OK']
+      });
+
+      await alert.present();
+
+      const {role} = await alert.onDidDismiss();
+      console.log('onDidDismiss resolved with role', role);
+
+
+    }else if(this.id_profesor >=12){
+
+      const alert = await this.alertController.create({
+        cssClass: 'my-custom-class',
+        header: 'DESOCUPADO',
+        subHeader: 'estacionamiento desocupado',
+        message: 'disponible.',
+        buttons: ['OK']
+      });
+      await alert.present();
+
+      const {role} = await alert.onDidDismiss();
+      console.log('onDidDismiss resolved with role', role);
+    }
   }
 }
